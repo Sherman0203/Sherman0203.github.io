@@ -15,8 +15,10 @@
 <meta property="og:site_name" content="Sherman&#39;s Blog">
 <meta property="og:description" content="1.序言开头万事难，入门就简单。 这是Sherman博客的第一篇文章。（该博客是基于hexo和yilia主题搭建） 根据csdn以及简书来进行学习建设博客枯燥且有趣。 所幸，我有点小心得，建议多参考hexo和yilia的使用手册 🔗链接🔗 Hexo使用手册：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;index.html         Yilia中文手册（转载）：https:&#x2F;&#x2F;x">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;image2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;%E5%88%86%E7%B1%BB.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;%E6%80%BB.png">
 <meta property="article:published_time" content="2019-12-10T12:17:00.000Z">
-<meta property="article:modified_time" content="2019-12-12T13:46:59.788Z">
+<meta property="article:modified_time" content="2019-12-12T14:49:25.739Z">
 <meta property="article:author" content="Sherman">
 <meta property="article:tag" content="文章">
 <meta property="article:tag" content="博客建设记录">
@@ -64,7 +66,7 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">文章</a></li>
+				<li><a href="/">主页及概要</a></li>
 	        
 			</ul>
 		</nav>
@@ -142,7 +144,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">文章</a></li>
+					<li style="width: 100%"><a href="/">主页及概要</a></li>
 		        
 				</ul>
 			</nav>
@@ -193,7 +195,52 @@
 <p>2.hexo clean + hexo g + hexo s + hexo d 是一连串的操作，先在本地编译并调试界面排版最后推（deployer）到github，当地网址为：localhost：4000</p>
 <p>3.blog本地中的_config.yml文件和主题文件里面的_config.yml文件是有很大区别的，主题的修改大部分是在主题（themes）文件中的_config.yml文件有关，甚至会影响到css文件，较为复杂，需要花时间钻研。目前先站在巨人的肩膀上进行博客运营，等内容丰富再做优化，充实内容</p>
 <p>4.hexo个人博客搭建真的体现了GitHub的开源精神，想要什么只有你想不到没有你做不到的操作，只要愿意花时间在上面，总会有满意的结果。            </p>
-<h2 id="3-后续跟上完整搭建心路历程与步骤"><a href="#3-后续跟上完整搭建心路历程与步骤" class="headerlink" title="3.后续跟上完整搭建心路历程与步骤"></a>3.后续跟上完整搭建心路历程与步骤</h2><p>..</p>
+<h2 id="3-搭建步骤"><a href="#3-搭建步骤" class="headerlink" title="3.搭建步骤"></a>3.搭建步骤</h2><h3 id="1-下载node-js-（nodejs-org）"><a href="#1-下载node-js-（nodejs-org）" class="headerlink" title="1.下载node.js （nodejs.org）"></a>1.下载node.js （<a href="http://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>）</h3><p>傻瓜式安装即可</p>
+<p>下载内容为：node.js本身和npm包管理器</p>
+<h3 id="2-打开终端-item"><a href="#2-打开终端-item" class="headerlink" title="2.打开终端 item"></a>2.打开终端 item</h3><p>一、管理员执行 sudo su 输入密码</p>
+<p>二、查看node版本</p>
+<p>​    node -v</p>
+<p>​    查看npm版本</p>
+<p>​    npm -v</p>
+<p>三、用npm安装淘宝的cnpm</p>
+<p>​    npm install -g cnpm –registry=https;//<a href="http://registry.npm.taobao.org" target="_blank" rel="noopener">registry.npm.taobao.org</a></p>
+<p>四、检查cnpm安装情况</p>
+<p>​    cnpm -v</p>
+<p>五、全局安装hexo框架</p>
+<p>​    cnpm install -g hexo-cli</p>
+<p>​    验证：hexo -v</p>
+<p>六、查看路径pwd，并建立一个空的文件夹</p>
+<p>​    mkdir blog    进入cd blog </p>
+<p>七、hexo生成博客</p>
+<p>​    sudo hexo init 生成一个博客（初始化）</p>
+<p>八、    启动博客</p>
+<p>​    hexo s</p>
+<h3 id="3-创建第一篇文章"><a href="#3-创建第一篇文章" class="headerlink" title="3.创建第一篇文章"></a>3.创建第一篇文章</h3><p>一、命令行 hexo n “我的第一篇博客文章”</p>
+<p>二、更改cd方向，用vim编译器进入 我的第一篇博客文章.md 并编译</p>
+<p>三、回退到/blog目录，../.. 然后清楚hexo缓存     hexo clean </p>
+<p>​    生成文件</p>
+<p>​    hexo g</p>
+<p>四、再启动查看文章</p>
+<h3 id="4-将博客部署到github-coding"><a href="#4-将博客部署到github-coding" class="headerlink" title="4.将博客部署到github(coding)"></a>4.将博客部署到github(coding)</h3><p>一、 登陆github，新建一个仓库，new repository ，命名规则：github用户名 <a href="http://Sherman0203.github.io" target="_blank" rel="noopener">Sherman0203.github.io</a> 描述：我的hexo博客</p>
+<p>—&gt;创建</p>
+<p>二、在blog根目录下安装一个git的插件</p>
+<p>​    cnpm install —save hexo-deployer-git</p>
+<p>三、设置 _config.yml文件 （每个冒号后面要加空格！）</p>
+<p>​    找到#Deployment下的type，输入git，回车在下面输入命令行：“repo： 仓库地址”</p>
+<p>继续写一个branch： master  -》保存退出</p>
+<p>四、部署远端</p>
+<p>​    hexo d</p>
+<p>​        输入GitHub账号，密码</p>
+<h3 id="5-更换hexo主题"><a href="#5-更换hexo主题" class="headerlink" title="5.更换hexo主题"></a>5.更换hexo主题</h3><p>1.输入终端git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<p>2.配到博客去 修改_config.yml文件</p>
+<p>​    vim _config.yml </p>
+<p>​    修改theme： yilia</p>
+<p>​    hexo clear</p>
+<p>​    hexo g</p>
+<p>​    hexo s</p>
+<p>3.部署到GitHub远端代码：hexo d..</p>
+<h2 id="4-Yilia主题的一些小技巧"><a href="#4-Yilia主题的一些小技巧" class="headerlink" title="4.Yilia主题的一些小技巧"></a>4.Yilia主题的一些小技巧</h2><p><img src="/img/%E5%88%86%E7%B1%BB.png" alt=""></p>
+<p><img src="/img/%E6%80%BB.png" alt=""></p>
 
       
       
@@ -311,11 +358,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/10/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/10/%20%20/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          欢迎来到我的博客
+          🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼
         
       </div>
     </a>
@@ -344,7 +391,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-序言"><span class="toc-number">1.</span> <span class="toc-text">1.序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-搭建容易碰到的小问题"><span class="toc-number">2.</span> <span class="toc-text">2.搭建容易碰到的小问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-后续跟上完整搭建心路历程与步骤"><span class="toc-number">3.</span> <span class="toc-text">3.后续跟上完整搭建心路历程与步骤</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-序言"><span class="toc-number">1.</span> <span class="toc-text">1.序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-搭建容易碰到的小问题"><span class="toc-number">2.</span> <span class="toc-text">2.搭建容易碰到的小问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-搭建步骤"><span class="toc-number">3.</span> <span class="toc-text">3.搭建步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载node-js-（nodejs-org）"><span class="toc-number">3.1.</span> <span class="toc-text">1.下载node.js （nodejs.org）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-打开终端-item"><span class="toc-number">3.2.</span> <span class="toc-text">2.打开终端 item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建第一篇文章"><span class="toc-number">3.3.</span> <span class="toc-text">3.创建第一篇文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-将博客部署到github-coding"><span class="toc-number">3.4.</span> <span class="toc-text">4.将博客部署到github(coding)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-更换hexo主题"><span class="toc-number">3.5.</span> <span class="toc-text">5.更换hexo主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Yilia主题的一些小技巧"><span class="toc-number">4.</span> <span class="toc-text">4.Yilia主题的一些小技巧</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -466,6 +513,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">主页</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">介绍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">文章</a>
               </li>
              
@@ -479,18 +538,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">主页</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">介绍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
