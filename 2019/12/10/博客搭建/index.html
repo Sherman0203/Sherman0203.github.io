@@ -18,7 +18,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;%E5%88%86%E7%B1%BB.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;%E6%80%BB.png">
 <meta property="article:published_time" content="2019-12-10T12:17:00.000Z">
-<meta property="article:modified_time" content="2019-12-12T14:49:25.739Z">
+<meta property="article:modified_time" content="2019-12-13T03:01:01.287Z">
 <meta property="article:author" content="Sherman">
 <meta property="article:tag" content="文章">
 <meta property="article:tag" content="博客建设记录">
@@ -90,8 +90,6 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/he-da-xin-94/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="weixin" target="_blank" href="/h1055191392" title="weixin"><i class="icon-weixin"></i></a>
-		        
 					<a class="mail" target="_blank" href="mailto:15618165797m@sina.cn" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
@@ -133,8 +131,6 @@
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/he-da-xin-94/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="weixin" target="_blank" href="/h1055191392" title="weixin"><i class="icon-weixin"></i></a>
-			        
 						<a class="mail" target="_blank" href="mailto:15618165797m@sina.cn" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
@@ -159,7 +155,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-              <div class="article-inner">
+            
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-序言"><span class="toc-number">1.</span> <span class="toc-text">1.序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-搭建容易碰到的小问题"><span class="toc-number">2.</span> <span class="toc-text">2.搭建容易碰到的小问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-搭建步骤"><span class="toc-number">3.</span> <span class="toc-text">3.搭建步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载node-js-（nodejs-org）"><span class="toc-number">3.1.</span> <span class="toc-text">1.下载node.js （nodejs.org）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-打开终端-item"><span class="toc-number">3.2.</span> <span class="toc-text">2.打开终端 item</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建第一篇文章"><span class="toc-number">3.3.</span> <span class="toc-text">3.创建第一篇文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-将博客部署到github-coding"><span class="toc-number">3.4.</span> <span class="toc-text">4.将博客部署到github(coding)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-更换hexo主题"><span class="toc-number">3.5.</span> <span class="toc-text">5.更换hexo主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Yilia主题的一些小技巧"><span class="toc-number">4.</span> <span class="toc-text">4.Yilia主题的一些小技巧</span></a></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="article-inner">
     
       <header class="article-header">
         
@@ -299,57 +341,6 @@
       
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/10/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -362,7 +353,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼🌼
+            
         
       </div>
     </a>
@@ -401,6 +392,26 @@
 </aside>
 
 
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="博客搭建" data-title="博客搭建" data-url="http://yoursite.com/2019/12/10/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
   
@@ -597,7 +608,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 							</script>
 						</span>
 					</p>
-					<p id="js-aboutme" style="margin:0 20px 0 20px;">在这里，你可以了解我并发现我的学习动态，希望看到我的blog的你也能有所收获，一起进步，优秀着。Here, you can learn about me and discover my learning dynamics. I hope you can see something on my blog.</P>
+					<p id="js-aboutme" style="margin:0 20px 0 20px;">在这里，你可以了解我并发现我的学习动态，希望看到我的blog的你也能有所收获，一起进步。因为特殊原因不开放评论功能，联系VX：h1055191392</P>
 				</div>
 			</div>
   	  	
