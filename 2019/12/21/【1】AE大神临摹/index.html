@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Sherman&#39;s Blog">
 <meta property="og:description" content="AE大神临摹【1.激光切割字】🔗https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av34511177?t&#x3D;389🔗">
 <meta property="article:published_time" content="2019-12-21T10:19:00.000Z">
-<meta property="article:modified_time" content="2019-12-21T15:14:06.761Z">
+<meta property="article:modified_time" content="2019-12-22T06:47:43.106Z">
 <meta property="article:author" content="Sherman">
 <meta property="article:tag" content="临摹">
 <meta property="article:tag" content="After Effect">
@@ -150,7 +150,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-                 
+            
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AE大神临摹【1-激光切割字】"><span class="toc-number">1.</span> <span class="toc-text">AE大神临摹【1.激光切割字】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体部分"><span class="toc-number">1.1.</span> <span class="toc-text">字体部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#破坏效果"><span class="toc-number">1.2.</span> <span class="toc-text">破坏效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#融化效果"><span class="toc-number">1.3.</span> <span class="toc-text">融化效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#粒子效果"><span class="toc-number">1.4.</span> <span class="toc-text">粒子效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#摄像机抖动效果"><span class="toc-number">1.5.</span> <span class="toc-text">摄像机抖动效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扭曲破碎边缘效果"><span class="toc-number">1.6.</span> <span class="toc-text">扭曲破碎边缘效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#END"><span class="toc-number">1.7.</span> <span class="toc-text">END</span></a></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+             
 
 
 
@@ -230,8 +254,16 @@
 <p>3.option+slice图层中的效果 点控制的点 输入表达式： toWorld（value）—移动点到原来的地方</p>
 <p>4.新建纯色图层，命名为holes，勾选制作合成大小—效果：分形杂色—对比：1700 缩放：5 复杂度：3—预合成（选第二）— 移到最下层 — 给Particle FX加效果：设置遮罩— 遮罩为：Holes Map — 用于遮罩：明亮度通道 — 勾选Particle FX 设置遮罩2的反转遮罩— Speed Randomness 设置为 100%</p>
 <p>5.cmd+d 复制Particle FX图层—grid spacing ：8 — force ： 30 — gravity：0.1 </p>
-<p>6.cmd+d 再次复制—效果：色调— 链接到slice的颜色效果上—效果：棋盘—混合模式：模版alpha</p>
-
+<p>6.cmd+d 再次复制—效果：色调— 链接到slice的颜色效果上—效果：棋盘—混合模式：模版alpha— cmd+d复制—细微调整</p>
+<p>7.新建调整图层—效果：运动模糊—素材：particle blur—大小：300%—调整与激光位置相同—效果：曲线</p>
+<p>8.复制一层—水平反转—透明度50—新建调整图层（运动模糊上方）—效果：转换通道—从获取alpha：饱和度—效果：固态层合成—颜色：黑—效果：发光—发光阈值：25—发光半径：12—复制两次，半径三个分别为12 35 130—调整图层混合模式：屏幕—效果：色相/饱和度—转换青色通道，提高亮度 45—效果：曲线—rgb通道，调高</p>
+<p>9.图层顶部新建调整图层—效果：色调 、 杂色 、 曲线—色调：20% 曲线增加对比度S型  杂色：5% </p>
+<p>10.烟雾粒子素材三个链接到slice—slice图层移到顶部</p>
+<h3 id="摄像机抖动效果"><a href="#摄像机抖动效果" class="headerlink" title="摄像机抖动效果"></a>摄像机抖动效果</h3><p>1.saber上方新建调整图层—效果：滑块控制—效果改名为shake—效果：变换—option/alt+位置 输入wiggle(7.5,链接到“滑块“)) </p>
+<p>2.打三个关键帧，抖动的感觉—效果：动态拼贴。放在最上方—勾选：镜像边缘 输出宽度：200 输出高度：200 </p>
+<h3 id="扭曲破碎边缘效果"><a href="#扭曲破碎边缘效果" class="headerlink" title="扭曲破碎边缘效果"></a>扭曲破碎边缘效果</h3><p>1.复制slice图层粘贴到text edit图层—复制burn图层的位置旋转表达式—粘贴到slice图层—移动到文字下方—重复文字层—遮罩：alpha</p>
+<p>2.新建调整图层在文字层下方—效果：湍流置换—数量180 大小15—25 复杂度2—效果：色调—全部设为白色</p>
+<h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>
       
       
 		
@@ -322,7 +354,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AE大神临摹【1-激光切割字】"><span class="toc-number">1.</span> <span class="toc-text">AE大神临摹【1.激光切割字】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体部分"><span class="toc-number">1.1.</span> <span class="toc-text">字体部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#破坏效果"><span class="toc-number">1.2.</span> <span class="toc-text">破坏效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#融化效果"><span class="toc-number">1.3.</span> <span class="toc-text">融化效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#粒子效果"><span class="toc-number">1.4.</span> <span class="toc-text">粒子效果</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AE大神临摹【1-激光切割字】"><span class="toc-number">1.</span> <span class="toc-text">AE大神临摹【1.激光切割字】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体部分"><span class="toc-number">1.1.</span> <span class="toc-text">字体部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#破坏效果"><span class="toc-number">1.2.</span> <span class="toc-text">破坏效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#融化效果"><span class="toc-number">1.3.</span> <span class="toc-text">融化效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#粒子效果"><span class="toc-number">1.4.</span> <span class="toc-text">粒子效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#摄像机抖动效果"><span class="toc-number">1.5.</span> <span class="toc-text">摄像机抖动效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扭曲破碎边缘效果"><span class="toc-number">1.6.</span> <span class="toc-text">扭曲破碎边缘效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#END"><span class="toc-number">1.7.</span> <span class="toc-text">END</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
