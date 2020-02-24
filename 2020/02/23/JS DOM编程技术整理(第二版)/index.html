@@ -101,13 +101,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    2.2k
+                    5.3k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    2 mins.
+                    5 mins.
                 </span>
                 
                 
@@ -143,7 +143,7 @@
         <div class="content markdown animated fadeIn">
             <h1 id="关于《Javascript-Dom-编程艺术-第二版-》"><a href="#关于《Javascript-Dom-编程艺术-第二版-》" class="headerlink" title="关于《Javascript Dom 编程艺术(第二版)》"></a><center>关于《Javascript Dom 编程艺术(第二版)》</center></h1><center><img src="/img/JSDOM/fengmian.jpg" alt="书籍封面" style="zoom:50%"/></center>
 
-<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a><center>变量的作用域</center></h4><p>如果一个函数的内部使用了全局变量的名字，即使本意是用于局部变量，JS也会认为是全局变量，当对这个变量进行赋值，全局变量也会被改变。</p>
+<h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a><center>变量的作用域</center></h2><p>如果一个函数的内部使用了全局变量的名字，即使本意是用于局部变量，JS也会认为是全局变量，当对这个变量进行赋值，全局变量也会被改变。</p>
 <pre><code class="js">let global = 1;
 function para(){
   let local = 10;
@@ -160,7 +160,7 @@ function para(){
 }
 para();
 alert(global);    //此时global=10</code></pre>
-<h4 id="内建对象"><a href="#内建对象" class="headerlink" title="内建对象"></a><center>内建对象</center></h4><p>数组也是一种内建对象，内建对象是JS已经定义好可以直接用的方法。</p>
+<h2 id="内建对象"><a href="#内建对象" class="headerlink" title="内建对象"></a><center>内建对象</center></h2><p>数组也是一种内建对象，内建对象是JS已经定义好可以直接用的方法。</p>
 <pre><code class="js">const beatles = new Array(); //定义新数组
 const currenttime = new Date();    //获得当前日期
 const year = currenttime.getYear();    //获得年
@@ -170,7 +170,7 @@ const day = currenttime.getDay();    //获得日
 const num = 5.1234
 const integer = Math.round(num); //四舍五入取整
 </code></pre>
-<h4 id="3种DOM方式获取元素"><a href="#3种DOM方式获取元素" class="headerlink" title="3种DOM方式获取元素"></a><center>3种DOM方式获取元素</center></h4><pre><code class="js">document.getElementById(&#39;Id&#39;);    //获得一对一
+<h2 id="3种DOM方式获取元素"><a href="#3种DOM方式获取元素" class="headerlink" title="3种DOM方式获取元素"></a><center>3种DOM方式获取元素</center></h2><pre><code class="js">document.getElementById(&#39;Id&#39;);    //获得一对一
 document.getElementByTagName(&#39;Tagname&#39;);    //获得一个数组
 document.getElementByClassName(&#39;class&#39;);    //获得的也是一个数组
 
@@ -179,7 +179,14 @@ document.getElementByClassName(&#39;class&#39;);    //获得的也是一个数�
 ...
 let div = document.getElementByClassName(&#39;div1 div2 div3&#39;); //顺序颠倒也可以
 assert(div.length != null,&quot;这是一个数组&quot;);</code></pre>
-<h4 id="高效加载JS代码文件"><a href="#高效加载JS代码文件" class="headerlink" title="高效加载JS代码文件"></a><center>高效加载JS代码文件</center></h4><pre><code class="js">&lt;!Doctype html&gt;
+<h2 id="高效加载JS代码文件"><a href="#高效加载JS代码文件" class="headerlink" title="高效加载JS代码文件"></a><center>高效加载JS代码文件</center></h2><p>包含脚本的最佳方式就是使用外部文件</p>
+<pre><code class="js">&lt;script src=&quot;scripts/function1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;scripts/function2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;scripts/function3.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;scripts/function4.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>这种方式是不高效率的，可以吧4个JS文件放置在一个JS文档中，页面发送请求次数减少。同时，当一个Html文件需要多个JS文件需要使用，建议将JS代码放在一个scripts文件夹，提高性能。</p>
+<p>再者，脚本文件建议放置最后位置，如下图显示。</p>
+<pre><code class="js">&lt;!Doctype html&gt;
   &lt;html&gt;
       &lt;head&gt;...&lt;/head&gt;
         &lt;body&gt;
@@ -187,7 +194,50 @@ assert(div.length != null,&quot;这是一个数组&quot;);</code></pre>
               &lt;script src=&quot;./scripts/math.js&quot;&gt;&lt;/script&gt;        //在body最后
       &lt;/body&gt;
   &lt;/html&gt;</code></pre>
-<p>当一个Html文件需要多个JS文件需要使用，建议将JS代码放在一个文件夹，处理代码会高效。</p>
+<p>网页会等其余所有文件加载完成后才会加载脚本，不会影响用户体验。</p>
+<p>同时，压缩脚本也是一种办法，将原来的工作副本xxx.js复制粘贴一份，作为精简文件xxx.min.js，将文件空格，注释清空。</p>
+<pre><code class="js">function preparelinks(){if(!document.getElementsByTagName) return false;let tagArrays=document.getElementsByTagName(&quot;a&quot;);for(let index=0;index&lt;tagArrays.length;index++){
+...</code></pre>
+<p>网上有代码压缩工具，可以百度下载。</p>
+<h2 id="调用JS函数方法"><a href="#调用JS函数方法" class="headerlink" title="调用JS函数方法"></a><center>调用JS函数方法</center></h2><pre><code class="js">function popUp(URL){
+  window.open(URL,&quot;新网页&quot;,&quot;width:350 height:400&quot;);
+  //BOM下window对象的open函数：window.open(url,name,features); 
+}</code></pre>
+<h3 id="“javascript：伪协议调用”"><a href="#“javascript：伪协议调用”" class="headerlink" title="“javascript：伪协议调用”"></a>“javascript：伪协议调用”</h3><pre><code class="js">&lt;a href=&quot;javascript:popUp(&#39;http://shermanblog.xyz&#39;);&quot;&gt;点击链接&lt;/a&gt;</code></pre>
+<h3 id="“内嵌的事件处理函数”"><a href="#“内嵌的事件处理函数”" class="headerlink" title="“内嵌的事件处理函数”"></a>“内嵌的事件处理函数”</h3><pre><code class="js">&lt;a href=&quot;#&quot; onclick=&quot;popUp(&#39;http://shermanblog.xyz&#39;);return false;&quot;&gt;点击链接&lt;/a&gt;</code></pre>
+<p>但是这两种方法一旦浏览器禁用JS就毫无作用。解决如下：</p>
+<pre><code class="js">&lt;a href=&quot;http://shermanblog.xyz&quot; onclick=&quot;popUp(&#39;http://shermanblog.xyz&#39;);return false&quot;&gt;点击链接&lt;/a&gt;    </code></pre>
+<h3 id="“分离Javascript”—最好的解决方式"><a href="#“分离Javascript”—最好的解决方式" class="headerlink" title="“分离Javascript”—最好的解决方式"></a>“分离Javascript”—最好的解决方式</h3><pre><code class="js">&lt;script src=&quot;./test.js&quot;&gt;&lt;/script&gt;    //调用外部JS文件
+&lt;a href=&quot;http://shermanblog.xyz&quot; class=&quot;popup&quot;&gt;点击连接&lt;/a&gt;
+
+...
+//外部test.js
+window.onload = preparelinks;
+function preparelinks(){
+let tagArrays = document.getElementByTagName(&quot;a&quot;);
+for(let index= 0; index &lt; tagArrays.length; index++){
+  if(tagArrays[index].getAttribute(&quot;class&quot;)===&quot;popup&quot;){
+             tagArrays[index].onclick = function(){
+          popUp(tagArrays.getAttribute(&#39;href&#39;));
+          return false;
+                };
+         }
+}
+}
+
+function popUp(URL){
+  window.open(URL,&quot;新网页&quot;,&quot;width:350 height:400&quot;); 
+}
+</code></pre>
+<p>平稳退化：不论是失去JS，CSS文件不会影响网页的内容生成。 </p>
+<h2 id="对象检测"><a href="#对象检测" class="headerlink" title="对象检测"></a><center>对象检测</center></h2><p>检测一个浏览器是否支持DOM语句，比如getElementsByTagName</p>
+<pre><code class="js">function preparelinks(){
+//执行下面语句之前，增加一个判断
+if(!document.getElementsByTagName) return false;
+//若是不支持这个判断，浏览器会跳过这个函数，不影响网页
+let tagArrays = document.getElementsByTagName(&quot;a&quot;);
+for(let index= 0; index &lt; tagArrays.length; index++){
+...</code></pre>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
