@@ -101,13 +101,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    8.1k
+                    8.7k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    7 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -297,9 +297,9 @@ window.onload = function(){
 <p><strong>document.insertBefore(‘新节点名’，’目标节点名’)</strong>    //将元素节点作为兄弟节点插入到目标节点前面</p>
 <p><strong>parentNode</strong> //父节点</p>
 <p><strong>lastChild</strong> //该节点下的最后一个子节点</p>
-<p><strong>firstChild</strong> //该节点下的第一个子节点 相当于childNode[0]</p>
+<p><strong>firstChild</strong> //该节点下的第一个子节点 相当 于childNode[0]</p>
 <p><strong>nextSibling</strong> //该节点的下一个兄弟节点</p>
-<p>⚠️不存在<strong>document.inserAfter(‘新节点名’，’目标节点名’)**</strong>这个方法⚠️</p>
+<p>⚠️不存在<strong>document.insertAfter(‘新节点名’，’目标节点名’)**</strong>这个方法⚠️</p>
 <p>但是可以写一个方便使用的脚本并且收录到JS中随时调用</p>
 <pre><code class="js">function insertAfter(newElement,targetElement){
   let parentNode = targetElement.parentNode;
@@ -309,6 +309,13 @@ window.onload = function(){
     parentNode.insertBefore(newElement,targetElement.nextSibling);
   }
 }</code></pre>
+<h2 id="Dom获得Style属性"><a href="#Dom获得Style属性" class="headerlink" title="Dom获得Style属性"></a><center>Dom获得Style属性</center></h2><pre><code class="js">&lt;p id=&quot;p1&quot; style=&quot;color:grey; font-family:&#39;Arial&#39; ; font-weight:bold&quot;&gt;This is a test.&lt;/p&gt;
+...
+let para = document.getElmentById(&#39;p1&#39;);
+alert(typeof para.style); //结果为一个对象
+alert(para.style.color); //结果等于grey
+alert(para.style.fontWeight);    //结果为bold</code></pre>
+<p>注意⚠️的是：font-weight在DOM中用驼峰命名法表示fontWeight，因为“-”在语句中会被认为是减号，会报错</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
