@@ -84,7 +84,7 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/JSDOM/desktop.jpg) ">
+                url(/img/JSDOM/lasr.gif) ">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
@@ -101,13 +101,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    8.7k
+                    9.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    8 mins.
+                    9 mins.
                 </span>
                 
                 
@@ -170,6 +170,10 @@ const day = currenttime.getDay();    //获得日
 const num = 5.1234
 const integer = Math.round(num); //四舍五入取整
 </code></pre>
+<h2 id="Math内建对象"><a href="#Math内建对象" class="headerlink" title="Math内建对象"></a><center>Math内建对象</center></h2><pre><code class="js">assert(Math.ceil(0.3),&quot;答案为1&quot;);    //取值为浮点数“大于”的整数
+assert(Math.floar(0.9),&quot;答案为0&quot;); //与ceil相反，取“小于”的整数
+assert(Math.round(0.5),&quot;答案为1&quot;);
+assert(Math.round(0.4),&quot;答案为0&quot;);    //常用的四舍五入</code></pre>
 <h2 id="3种DOM方式获取元素"><a href="#3种DOM方式获取元素" class="headerlink" title="3种DOM方式获取元素"></a><center>3种DOM方式获取元素</center></h2><pre><code class="js">document.getElementById(&#39;Id&#39;);    //获得一对一
 document.getElementByTagName(&#39;Tagname&#39;);    //获得一个数组
 document.getElementByClassName(&#39;class&#39;);    //获得的也是一个数组
@@ -316,7 +320,14 @@ alert(typeof para.style); //结果为一个对象
 alert(para.style.color); //结果等于grey
 alert(para.style.fontWeight);    //结果为bold</code></pre>
 <p>注意⚠️的是：font-weight在DOM中用驼峰命名法表示fontWeight，因为“-”在语句中会被认为是减号，会报错</p>
-
+<h2 id="DOM属性的特殊用法"><a href="#DOM属性的特殊用法" class="headerlink" title="DOM属性的特殊用法"></a><center>DOM属性的特殊用法</center></h2><p>当函数发生这么一种情况：</p>
+<p>​    “既不能使用全局变量，也不能使用局部变量，并且还是需要这么一种东西能够介于他们两者之间的变量。”</p>
+<p>只与某个特定元素有关的变量是存在的，而且我们经常会使用就是“属性”。Javascript允许我们为元素创建属性：</p>
+<pre><code class="js">element.property = &quot;value&quot;;
+//只要你愿意,可以任意定一个名为myName的属性，并且值为Sherman
+element.myName = &quot;Sherman&quot;;</code></pre>
+<p>这很像是在创建一个变量，但区别是这个变量专属于某个特定的元素。我们创建一个元素属性的变量，它已经存在，并且可以在函数内使用任何方法，避免了全局变量和局部变量的BUG</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><hr></h3><h3 id="以上是个人认为书中比较重要的知识点，欢迎楼下评论"><a href="#以上是个人认为书中比较重要的知识点，欢迎楼下评论" class="headerlink" title="以上是个人认为书中比较重要的知识点，欢迎楼下评论"></a><center>以上是个人认为书中比较重要的知识点，欢迎楼下评论</center></h3>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
